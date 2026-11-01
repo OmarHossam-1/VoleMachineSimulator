@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class screen
+class Screen
 {
 private:
     string buffer;
