@@ -5,7 +5,7 @@ using namespace std;
 
 class ALU
 {
-    public:
+public:
 
     uint8_t add_integer(uint8_t op1, uint8_t op2);
 

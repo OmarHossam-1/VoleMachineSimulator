@@ -25,14 +25,14 @@ void Memory::clear() {
     }
 }
 
-bool Memory::loadProgramFromFile(std::string filename) {
+bool Memory::loadProgramFromFile(std::string filename, uint8_t startAddress) {
     std::ifstream file(filename);
     if (!file.is_open()) {
         return false;
     }
 
     std::string line;
-    int index = 0;
+    int index = startAddress; 
 
     while (file >> line && index < 256) {
         if (line.length() == 4) {
@@ -43,7 +43,9 @@ bool Memory::loadProgramFromFile(std::string filename) {
             unsigned char byte2 = (unsigned char)std::stoi(part2, nullptr, 16);
 
             memory[index] = byte1;
-            memory[index + 1] = byte2;
+            if (index + 1 < 256) {
+                memory[index + 1] = byte2;
+            }
 
             index += 2;
         }

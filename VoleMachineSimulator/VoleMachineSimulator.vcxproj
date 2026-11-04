@@ -123,13 +123,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ALU.cpp" />
     <ClCompile Include="ConsoleUI.cpp" />
-    <ClCompile Include="screen.cpp" />
-    <ClCompile Include="VoleMachineSimulator.cpp" />
+    <ClCompile Include="ControlUnit.cpp" />
+    <ClCompile Include="Instruction.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MemoryFile.cpp" />
+    <ClCompile Include="RegisterFile.cpp" />
+    <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="VoleMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ALU.h" />
     <ClInclude Include="ConsoleUI.h" />
-    <ClInclude Include="screen.h" />
+    <ClInclude Include="ControlUnit.h" />
+    <ClInclude Include="Instruction.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="Register.h" />
+    <ClInclude Include="Screen.h" />
+    <ClInclude Include="VoleMachine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

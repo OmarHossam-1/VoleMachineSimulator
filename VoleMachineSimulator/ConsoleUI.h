@@ -1,14 +1,12 @@
 #pragma once
+#include "VoleMachine.h"
 
-class ConsoleUI
-{
+class ConsoleUI {
 public:
-
     void displayMenu();
-    void displayMemory();
-    void displayRegisters();
-    void displayStatus();
-    void displayScreen();
-
     int getUserChoice();
+    void displayMemory(VoleMachine &machine);
+    void displayRegisters(VoleMachine &machine);
+    void displayStatus(VoleMachine &machine);
+    void displayScreen(VoleMachine &machine);
 };

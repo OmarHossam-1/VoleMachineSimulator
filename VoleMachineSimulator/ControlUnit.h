@@ -1,13 +1,10 @@
-
 #pragma once
 #include <cstdint>
 #include "Instruction.h"
 #include "Memory.h"
-#include "RegisterFile.h"
+#include "Register.h"
 #include "ALU.h"
 #include "Screen.h"
-
-
 
 class ControlUnit {
 private:
@@ -16,15 +13,15 @@ private:
     bool halted;
     Instruction current;
 
-    public:
+public:
     ControlUnit();
-    void fetch(Memory &memory);
+    void fetch(Memory& memory);
     void decode();
-    void execute(Memory &memory,RegisterFile &registers,ALU &alu,Screen &screen );
+    void execute(Memory& memory, RegisterFile& registers, ALU& alu, Screen& screen);
     void reset();
+    void setPC(uint8_t newPC);
 
     bool isHalted() const;
     uint8_t getPC() const;
     uint16_t getIR() const;
 };
-
