@@ -18,6 +18,7 @@ private:
 
     public:
     ControlUnit();
+    void setPC(uint8_t newPC);
     void fetch(Memory &memory);
     void decode();
     void execute(Memory &memory,RegisterFile &registers,ALU &alu,Screen &screen );

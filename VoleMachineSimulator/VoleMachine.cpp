@@ -5,18 +5,38 @@ VoleMachine::VoleMachine() {
     reset();
 }
 
+void VoleMachine::setPC(uint8_t newPC) {
+    cu.setPC(newPC);
+}
+
+void VoleMachine::setRegister(int idx, uint8_t val) {
+    registers.setRegister(idx, val);
+}
+
+void VoleMachine::setMemoryCell(int addr, uint8_t val) {
+    memory.setCell(addr, val);
+}
+
+uint8_t VoleMachine::getRegister(int idx) const {
+    return registers.getRegister(idx);
+}
+
+uint8_t VoleMachine::getMemoryCell(int addr) const {
+    return memory.getCell(addr);
+}
+
 bool VoleMachine::loadProgram(string filename, uint8_t startAddress) {
     return memory.loadProgramFromFile(filename,startAddress);
 }
 
 void VoleMachine::reset() {
-    memory.clear();
-    registers.clearRegisters();
-    screen.clear();
-    cu.reset();
+        registers.clear();
+        memory.clear();
+        cu.reset();
+
 }
 
-void VoleMachine::step() const {
+void VoleMachine::step()  {
 
     if (cu.isHalted()) {
         return;
@@ -39,9 +59,18 @@ string VoleMachine::getScreen() {
 
 
 void VoleMachine::displayStatus() const {
-    printf("PC: 0x%02X | IR: 0x%04X | Halted: %s\n",
-            cu.getPC(),
-            cu.getIR(),
-            cu.isHalted() ? "Yes" : "No");
+    std::cout << "PC: " << static_cast<int>(cu.getPC()) << "\n";
+
+    std::cout << "--- Registers ---\n";
+    for (int i = 0; i < 16; ++i) {
+        std::cout << "R" << i << ": " << static_cast<int>(registers.getRegister(i)) << " ";
+    }
+    std::cout << "\n";
+
+    std::cout << "--- Memory ---\n";
+    for (int i = 0; i < 256; ++i) {
+        std::cout << static_cast<int>(memory.getCell(i)) << " ";
+    }
+    std::cout << "\n";
 }
 

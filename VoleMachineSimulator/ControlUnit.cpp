@@ -8,6 +8,12 @@ void ControlUnit::reset() {
     ir=0x0000;
     halted=false;
 }
+
+void ControlUnit::setPC(uint8_t newPC) {
+    pc = newPC;
+    halted = false;
+}
+
 bool ControlUnit::isHalted() const {
     return halted;
 }
@@ -40,8 +46,8 @@ void ControlUnit::execute(Memory &memory, RegisterFile &registers, ALU &alu, Scr
             break;
         }
         case 2: { // LOAD R, XY --> Direct
-            uint8_t value = (current.x<< 4|current.y);
-            registers.setRegister(current.r,value);
+            uint8_t value = (current.x << 4) | current.y;
+            registers.setRegister(current.r, value);
             break;
         }
         case 3: { // STORE R, [XY]
@@ -57,15 +63,14 @@ void ControlUnit::execute(Memory &memory, RegisterFile &registers, ALU &alu, Scr
             }
             break;
         }
-            case 4: { // MOVE R, S
+        case 4: { // MOVE R, S
 
-            uint8_t value = registers.getRegister(current.y);
-
-            registers.setRegister(current.r, value);
+            uint8_t value = registers.getRegister(current.x);
+            registers.setRegister(current.y, value);
             break;
         }
 
-            case 5: { // ADD Integer
+        case 5: { // ADD Integer
 
             uint8_t val_S= registers.getRegister(current.x);
             uint8_t val_T= registers.getRegister(current.y);
@@ -73,28 +78,28 @@ void ControlUnit::execute(Memory &memory, RegisterFile &registers, ALU &alu, Scr
             registers.setRegister(current.r,result);
             break;
         }
-            case 6: { // ADD Float
+        case 6: { // ADD Float
             uint8_t val_S= registers.getRegister(current.x);
             uint8_t val_T= registers.getRegister(current.y);
             uint8_t result = alu.addFloat(val_S,val_T);
             registers.setRegister(current.r,result);
             break;
         }
-            case 7: { // OR
+        case 7: { // OR
             uint8_t val_S= registers.getRegister(current.x);
             uint8_t val_T= registers.getRegister(current.y);
             uint8_t result = alu.bitwiseOr(val_S,val_T);
             registers.setRegister(current.r,result);
             break;
         }
-            case 8: { // AND
+        case 8: { // AND
             uint8_t val_S=registers.getRegister(current.x);
             uint8_t val_T = registers.getRegister(current.y);
             uint8_t result=alu.bitwiseAnd(val_S,val_T);
             registers.setRegister(current.r,result);
             break;
         }
-            case 9: { // XOR
+        case 9: { // XOR
             uint8_t val_S = registers.getRegister(current.x);
             uint8_t val_T = registers.getRegister(current.y);
             uint8_t result = alu.bitwiseXor(val_S,val_T);
@@ -102,13 +107,13 @@ void ControlUnit::execute(Memory &memory, RegisterFile &registers, ALU &alu, Scr
             break;
 
         }
-            case 10: { // ROTATE
+        case 10: { // ROTATE
             uint8_t val_R = registers.getRegister(current.r);
             uint8_t result = alu.rotateRight(val_R,current.y);
             registers.setRegister(current.r,result);
             break;
         }
-            case 11: { // JUMP R, XY
+        case 11: { // JUMP R, XY
             uint8_t val_R = registers.getRegister(current.r);
             uint8_t val_R0 = registers.getRegister(0);
             if (val_R == val_R0) {
@@ -118,12 +123,21 @@ void ControlUnit::execute(Memory &memory, RegisterFile &registers, ALU &alu, Scr
             }
             break;
         }
-            case 12: { // HALT...
+        case 12: { // HALT...
             halted = true;
             break;
         }
-        default:
+        case 13: {
+            if (registers.getRegister(current.r) > registers.getRegister(0)) {
+                pc = current.address;
+            }
             break;
+        }
+        default:
+        {
+            std::cerr << "Error: Invalid Instruction encountered!\n";
+            halted = true;
+            break;
+        }
     }
 }
-

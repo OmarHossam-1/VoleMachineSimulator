@@ -7,7 +7,6 @@
 #include "Screen.h"
 #include <cstdint>
 #include <string>
-using namespace std;
 
 class VoleMachine {
 private:
@@ -18,12 +17,17 @@ private:
     ControlUnit cu;
 public:
     VoleMachine();
-    bool loadProgram(string filename,uint8_t startAddress);
+    bool loadProgram(std::string filename,uint8_t startAddress);
     void run();
-    void step()const;
+    void step();
     void reset();
-    string getScreen();
+    std::string getScreen();
     void displayStatus()const;
+    void setPC(uint8_t newPC);
+    void setRegister(int idx, uint8_t val);
+    void setMemoryCell(int addr, uint8_t val);
+    uint8_t getRegister(int idx) const;
+    uint8_t getMemoryCell(int addr) const;
 
 };
 
