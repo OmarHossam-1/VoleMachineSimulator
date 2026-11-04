@@ -1,4 +1,4 @@
-#include "Register.h"
+#include "RegisterFile.h"
 
 RegisterFile::RegisterFile() {
     clear();

@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "Instruction.h"
 #include "Memory.h"
-#include "Register.h"
+#include "RegisterFile.h"
 #include "ALU.h"
 #include "Screen.h"
 

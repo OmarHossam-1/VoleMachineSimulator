@@ -59,13 +59,13 @@
     <ClInclude Include="Memory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Register.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ControlUnit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VoleMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RegisterFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

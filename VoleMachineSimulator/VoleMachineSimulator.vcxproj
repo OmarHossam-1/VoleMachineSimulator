@@ -139,7 +139,7 @@
     <ClInclude Include="ControlUnit.h" />
     <ClInclude Include="Instruction.h" />
     <ClInclude Include="Memory.h" />
-    <ClInclude Include="Register.h" />
+    <ClInclude Include="RegisterFile.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="VoleMachine.h" />
   </ItemGroup>
