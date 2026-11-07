@@ -1,0 +1,50 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch VoleMachineGUI (Auto-detect / MSVC)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/VoleMachineGUI.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "externalTerminal",
+      "preLaunchTask": "Build VoleMachineGUI (Auto-detect MSVC / MinGW)"
+    },
+    {
+      "name": "Launch VoleMachineGUI (MSVC cl.exe)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/VoleMachineGUI.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "externalTerminal",
+      "preLaunchTask": "Build VoleMachineGUI (MSVC cl.exe)"
+    },
+    {
+      "name": "Launch VoleMachineGUI (MinGW / GDB)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/VoleMachineGUI.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "Build VoleMachineGUI (MinGW g++)"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": [
+        "${workspaceFolder}/VoleMachineSimulator",
+        "${workspaceFolder}/VoleMachineSimulator/gui",
+        "${workspaceFolder}/VoleMachineSimulator/gui/imgui",
+        "${workspaceFolder}/VoleMachineSimulator/gui/imgui/backends"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE",
+        "WIN32"
+      ],
+      "windowsSdkVersion": "10.0",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "windows-msvc-x64"
+    }
+  ],
+  "version": 4
+}
