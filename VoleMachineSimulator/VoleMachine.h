@@ -37,4 +37,11 @@ public:
 
     uint8_t getRegister(int index) { return registers.getRegister(index); }
     uint8_t getMemoryCell(int address) { return memory.getCell(address); }
+
+    // Step-by-step control
+    void fetchStep()   { if (!cu.isHalted()) cu.fetch(memory); }
+    void decodeStep()  { cu.decode(); }
+    void executeStep() { cu.execute(memory, registers, alu, screen); }
+    void clearScreen() { screen.clear(); }
+    Instruction getLastInstruction() const { return cu.getCurrentInstruction(); }
 };

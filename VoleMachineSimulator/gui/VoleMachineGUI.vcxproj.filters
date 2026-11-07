@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{B2C3D4E5-0002-0001-0001-000000000002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Source Files">
+      <UniqueIdentifier>{B2C3D4E5-0002-0002-0001-000000000002}</UniqueIdentifier>
+      <Extensions>cpp</Extensions>
+    </Filter>
+    <Filter Include="GUI\Header Files">
+      <UniqueIdentifier>{B2C3D4E5-0002-0003-0001-000000000002}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="GUI\ImGui">
+      <UniqueIdentifier>{C3D4E5F6-0003-0001-0001-000000000003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\ImGui\Core">
+      <UniqueIdentifier>{C3D4E5F6-0003-0002-0001-000000000003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\ImGui\Backends">
+      <UniqueIdentifier>{C3D4E5F6-0003-0003-0001-000000000003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared Backend">
+      <UniqueIdentifier>{A1B2C3D4-0001-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared Backend\Source Files">
+      <UniqueIdentifier>{A1B2C3D4-0001-0002-0001-000000000001}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx</Extensions>
+    </Filter>
+    <Filter Include="Shared Backend\Header Files">
+      <UniqueIdentifier>{A1B2C3D4-0001-0003-0001-000000000001}</UniqueIdentifier>
+      <Extensions>h;hpp</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- GUI -->
+    <ClCompile Include="GuiMain.cpp">
+      <Filter>GUI\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiUI.cpp">
+      <Filter>GUI\Source Files</Filter>
+    </ClCompile>
+    <!-- Dear ImGui core -->
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>GUI\ImGui\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>GUI\ImGui\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>GUI\ImGui\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>GUI\ImGui\Core</Filter>
+    </ClCompile>
+    <!-- Dear ImGui backends -->
+    <ClCompile Include="imgui\backends\imgui_impl_win32.cpp">
+      <Filter>GUI\ImGui\Backends</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\backends\imgui_impl_dx11.cpp">
+      <Filter>GUI\ImGui\Backends</Filter>
+    </ClCompile>
+    <!-- Shared Backend -->
+    <ClCompile Include="..\ALU.cpp">
+      <Filter>Shared Backend\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ControlUnit.cpp">
+      <Filter>Shared Backend\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Instruction.cpp">
+      <Filter>Shared Backend\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MemoryFile.cpp">
+      <Filter>Shared Backend\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RegisterFile.cpp">
+      <Filter>Shared Backend\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Screen.cpp">
+      <Filter>Shared Backend\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VoleMachine.cpp">
+      <Filter>Shared Backend\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- GUI headers -->
+    <ClInclude Include="GuiUI.h">
+      <Filter>GUI\Header Files</Filter>
+    </ClInclude>
+    <!-- Dear ImGui headers -->
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>GUI\ImGui\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>GUI\ImGui\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>GUI\ImGui\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\backends\imgui_impl_win32.h">
+      <Filter>GUI\ImGui\Backends</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\backends\imgui_impl_dx11.h">
+      <Filter>GUI\ImGui\Backends</Filter>
+    </ClInclude>
+    <!-- Shared Backend headers -->
+    <ClInclude Include="..\ALU.h">
+      <Filter>Shared Backend\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ControlUnit.h">
+      <Filter>Shared Backend\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Instruction.h">
+      <Filter>Shared Backend\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Memory.h">
+      <Filter>Shared Backend\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RegisterFile.h">
+      <Filter>Shared Backend\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Screen.h">
+      <Filter>Shared Backend\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VoleMachine.h">
+      <Filter>Shared Backend\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

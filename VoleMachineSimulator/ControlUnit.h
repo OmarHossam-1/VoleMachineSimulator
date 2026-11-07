@@ -24,4 +24,5 @@ public:
     bool isHalted() const;
     uint8_t getPC() const;
     uint16_t getIR() const;
+    Instruction getCurrentInstruction() const { return current; }
 };

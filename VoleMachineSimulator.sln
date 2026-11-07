@@ -1,9 +1,10 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.37824.6 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VoleMachineSimulator", "VoleMachineSimulator\VoleMachineSimulator.vcxproj", "{240A6D12-2286-4F8F-862E-6DB37C8C9BFA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VoleMachineGUI", "VoleMachineSimulator\gui\VoleMachineGUI.vcxproj", "{B3F0E3D1-7C65-4E89-9A0B-4C5D6E7F8A9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +22,14 @@ Global
 		{240A6D12-2286-4F8F-862E-6DB37C8C9BFA}.Release|x64.Build.0 = Release|x64
 		{240A6D12-2286-4F8F-862E-6DB37C8C9BFA}.Release|x86.ActiveCfg = Release|Win32
 		{240A6D12-2286-4F8F-862E-6DB37C8C9BFA}.Release|x86.Build.0 = Release|Win32
+		{B3F0E3D1-7C65-4E89-9A0B-4C5D6E7F8A9B}.Debug|x64.ActiveCfg = Debug|x64
+		{B3F0E3D1-7C65-4E89-9A0B-4C5D6E7F8A9B}.Debug|x64.Build.0 = Debug|x64
+		{B3F0E3D1-7C65-4E89-9A0B-4C5D6E7F8A9B}.Debug|x86.ActiveCfg = Debug|Win32
+		{B3F0E3D1-7C65-4E89-9A0B-4C5D6E7F8A9B}.Debug|x86.Build.0 = Debug|Win32
+		{B3F0E3D1-7C65-4E89-9A0B-4C5D6E7F8A9B}.Release|x64.ActiveCfg = Release|x64
+		{B3F0E3D1-7C65-4E89-9A0B-4C5D6E7F8A9B}.Release|x64.Build.0 = Release|x64
+		{B3F0E3D1-7C65-4E89-9A0B-4C5D6E7F8A9B}.Release|x86.ActiveCfg = Release|Win32
+		{B3F0E3D1-7C65-4E89-9A0B-4C5D6E7F8A9B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

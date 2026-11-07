@@ -1,8 +1,12 @@
-#include "screen.h"
+#include "Screen.h"
+#include <string>
 
 void Screen::write(uint8_t value)
 {
-	buffer += static_cast<char>(value);
+	if (!buffer.empty()) {
+		buffer += " ";
+	}
+	buffer += std::to_string(static_cast<int>(static_cast<int8_t>(value)));
 }
 
 string Screen::getOutput() const

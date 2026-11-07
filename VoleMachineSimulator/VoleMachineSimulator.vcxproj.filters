@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
@@ -15,19 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Screen.cpp">
+    <ClCompile Include="ALU.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ALU.cpp">
+    <ClCompile Include="ControlUnit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Instruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MemoryFile.cpp">
@@ -36,21 +36,21 @@
     <ClCompile Include="RegisterFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VoleMachine.cpp">
+    <ClCompile Include="Screen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ControlUnit.cpp">
+    <ClCompile Include="VoleMachine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Screen.h">
+    <ClInclude Include="ALU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleUI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ALU.h">
+    <ClInclude Include="ControlUnit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Instruction.h">
@@ -59,13 +59,13 @@
     <ClInclude Include="Memory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ControlUnit.h">
+    <ClInclude Include="RegisterFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Screen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VoleMachine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RegisterFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
